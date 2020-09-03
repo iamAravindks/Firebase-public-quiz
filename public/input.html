@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Firebase Hosting</title>
+    <link rel="stylesheet" href="input.css" />
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.5/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.5/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <div id="secondary">
+        <h2 id="name"></h2>
+        <h3 id="heads-up"></h3>
+        <div id="asset">
+          <button id="prev">Prev</button>
+          <div id="progrees-bar">
+            <div id="progress-full"></div>
+          </div>
+          <button id="next">Next</button>
+        </div>
+        <h2 id="question"></h2>
+        <div class="choice-container">
+          <p class="choice-prefix">
+            <input type="radio" name="choices" id="" /><label for="choices"
+              >a</label
+            >
+          </p>
+          <p class="choice" data-number="0"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">
+            <input type="radio" name="choices" id="" /><label for="choices"
+              >b</label
+            >
+          </p>
+          <p class="choice" data-number="1"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">
+            <input type="radio" name="choices" id="" /><label for="choices"
+              >c</label
+            >
+          </p>
+          <p class="choice" data-number="2"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">
+            <input type="radio" name="choices" id="" /><label for="choices"
+              >d</label
+            >
+          </p>
+          <p class="choice" data-number="3"></p>
+        </div>
+      </div>
+      
+
+    <script src="input.js"></script>
+  </body>
+</html>
