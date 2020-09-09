@@ -26,7 +26,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+          <div class="form sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -52,14 +52,25 @@
               <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
               <p class="social-text">sign in with Google</p>
             </button>
-          </form>
+          </div>
         </div>
       </div>
       <div class="login">
         <img src="./welcome.svg" class="image" alt="" />
-        <p style="margin: auto; display: block; font-size: 3rem">
-          welcome User
-        </p>
+        <p id="welcome">welcome</p>
+        <button id="honor" onclick="showQUiz()">Continue</button>
+      </div>
+      <div id="table">
+        <h1 id="tabletext">Select your choice from the table</h1>
+        <table>
+          <thead id="t-head">
+            <tr>
+              <th>quiz name</th>
+              <th>content</th>
+            </tr>
+          </thead>
+          <tbody id="t-body"></tbody>
+        </table>
       </div>
     </div>
     <script src="./login.js"></script>
