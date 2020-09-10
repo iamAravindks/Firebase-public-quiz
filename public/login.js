@@ -74,13 +74,22 @@ const showQUiz = () => {
             console.log(doc.data().Name);
             console.log(doc.data().Quiz.length)
             let tableCont = `<tr>
-                    <td>${doc.data().Name}</td>
+                    <td > <button class="contentBtn" onclick="takeQuiz('${doc.id}')" >${doc.data().Name}</button> </td>
                     <td>${doc.data().Quiz.length}</td>
                       </tr>`
-
             tableBody.insertAdjacentHTML("beforeend", tableCont);
 
 
         });
     })
+
+
+}
+
+function takeQuiz(id) {
+    let urlId = `${window.location.href}?id=${id}`
+    urlId = urlId.replace("/login.html", "/input.html")
+    console.log(urlId)
+    location.href = urlId
+
 }

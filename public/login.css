@@ -186,11 +186,21 @@ th {
   font-size: 20px;
 }
 td,
-th {
+th,
+td .contentBtn {
   text-transform: capitalize;
   border: 1px solid #dddddd;
   text-align: center;
   padding: 10px;
+}
+td .contentBtn {
+  width: 5rem;
+  outline: none;
+  border: none;
+}
+td .contentBtn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.911);
 }
 
 #t-body {

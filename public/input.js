@@ -13,19 +13,24 @@ let availableQuestions = []
 let MAX_QUESTIONS = 0
 let ansCount = []
 let userAns = []
+
 document.addEventListener("DOMContentLoaded", event => {
 
     app = firebase.app()
     db = firebase.firestore()
+    let url = location.href
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id')
 
 
 
-    function startGame() {
+    function startGame(id) {
 
 
 
 
-        var docRef = db.collection("admin").doc("first-admin");
+        var docRef = db.collection("admin").doc(id);
 
         docRef.get().then(function (doc) {
             if (doc.exists) {
@@ -67,7 +72,7 @@ document.addEventListener("DOMContentLoaded", event => {
     //events for next and prev
     document.getElementById("next").addEventListener("click", next)
     document.getElementById("prev").addEventListener("click", prev)
-    startGame()
+    startGame(id)
 
 })
 function display() {
